@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <script>
+        function validatePhone(x) {
+            if (x.value.length !== 10) alert("Invalid phone number");
+        }
+        function showFee(sel) {
+            document.getElementById("fee").innerText = "Fee: $" + (sel.value === "Music" ? 10 : 15);
+        }
+        function enlarge(img) {
+            img.style.width = "300px";
+        }
+        function countChars(el) {
+            document.getElementById("count").innerText = el.value.length + " chars";
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Phone" onblur="validatePhone(this)">
+    <br>
+    <select onchange="showFee(this)">
+        <option value="">Select</option>
+        <option value="Music">Music</option>
+        <option value="Art">Art</option>
+    </select>
+    <p id="fee"></p>
+    <button onclick="alert('Submitted!')">Submit</button>
+    <br>
+    <img src="https://static.vecteezy.com/system/resources/previews/030/627/093/non_2x/volunteering-at-a-community-event-free-photo.jpg" width="100" ondblclick="enlarge(this)">
+    <br>
+    <textarea onkeyup="countChars(this)"></textarea>
+    <p id="count">0 chars</p>
+</body>
+</html>

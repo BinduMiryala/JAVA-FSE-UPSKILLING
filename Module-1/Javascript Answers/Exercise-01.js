@@ -1,0 +1,5 @@
+// Task 1: JavaScript Basics & Setup
+console.log("Welcome to the Community Portal");
+window.onload = () => {
+    alert("Page fully loaded");
+};

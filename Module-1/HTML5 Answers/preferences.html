@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preferences</title>
+    <script>
+        function savePref(sel) {
+            localStorage.setItem("eventType", sel.value);
+        }
+        function clearPrefs() {
+            localStorage.clear();
+            sessionStorage.clear();
+        }
+        window.onload = function() {
+            let saved = localStorage.getItem("eventType");
+            if (saved) document.getElementById("eventSelect").value = saved;
+        };
+    </script>
+</head>
+<body>
+    <select id="eventSelect" onchange="savePref(this)">
+        <option value="">Select</option>
+        <option>Music</option>
+        <option>Art</option>
+    </select>
+    <button onclick="clearPrefs()">Clear Preferences</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Styled Table</title>
+  <style>
+    table, th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Event Schedule</h2>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Event</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>June 1</td>
+      <td>Music Fest</td>
+      <td>Hall A</td>
+    </tr>
+    <tr>
+      <td>June 5</td>
+      <td>Tech Talk</td>
+      <td>Auditorium</td>
+    </tr>
+    <tr>
+      <td>June 10</td>
+      <td>Workshop</td>
+      <td>Lab 3</td>
+    </tr>
+  </table>
+</body>
+</html>
